@@ -1,0 +1,146 @@
+#Pregunta 1
+#Programa que pide tu Datos personales Y luego los muestra
+#Autor: Pedro Williams Arzapalo Campos
+print("1: Programa que muestra tus datos personales")
+Nom1=input('Ingrese sus nombres: ')
+Ape1=input('Ingrese sus Apellidos: ')
+Edad1=input('Ingrese su Edad: ')
+DatosP="Nombre: "+Nom1 +" "+Ape1+"\nEdad: "+Edad1
+print("\nTus datos personales son: \n"+DatosP)
+print("\n---------------------------------  \n")
+#Pregunta 2
+#Formula Area del circulo=pi*r^2
+#Formula Area del cuadrado inscrito= 2*r^2
+#Formula Area del triangulo inscrito=(((3)^(3/2))/8)*r^2
+#Programa que calcula el area de un circulo, triangulo y cuadrado con un radio ingresado
+print("2: Programa para calcula el area del circulo,cuadrado y triangulo")
+radio1=int(input("Ingrese el Radio: "))
+pit1=3.1416
+Acircu=pit1*(radio1**2)
+Acuadra=2*(radio1**2)
+Atrian=0.6495*(radio1**2)
+print("\nEl area del circulo,cuadrado,triangulo- \ninscrito en la circunferencia de Radio: ",radio1)
+print("El area del circulo es: ",Acircu)
+print("El area del cuadrado inscrito en el circulo es: ",Acuadra)
+print("El area del triangulo inscrito en el circulo es: ",Atrian)
+print("\n---------------------------------  \n")
+
+#Pregunta 3
+print("3: Programa para realiza operaciones matematicas para 2 numeros como \nsuma(1), resta(2), multiplicacion(3), division(4), division_entera(5)")
+Opera=int(input("Ingrese el numero de la operacion que quiere realizar (1-5): "))
+Num1=int(input("Ingrese valor del numero 1: "))
+Num2=int(input("Ingrese valor del numero 2: "))
+if(Opera==5 and Num2!=0): 
+    resultado=int(Num1//Num2)
+    print("La division entera es: ",resultado)
+elif(Opera==4 and Num2!=0):
+    resultado=float(Num1/Num2)
+    print("La division es: ",resultado)
+elif(Opera==3):
+    resultado=int(Num1*Num2)
+    print("La multiplicacion es: ",resultado)
+elif(Opera==2):
+    resultado=int(Num1-Num2)
+    print("La resta es: ",resultado)
+elif(Opera==1): 
+    resultado=int(Num1+Num2)
+    print("La suma es: ",resultado) 
+else:
+    print("El numero de Operacion que ingreso no es valido(o la divsion por 0), \npor favor  escriba un valor entre 1 y 5")    
+
+print("\n---------------------------------  \n")
+#Pregunta 4
+print("4: Programa para imprima el tipo de dato ingresado")
+datos1=input("ingrese un valor: ")
+tipoes2=type(datos1)
+print("La valor es de tipo : ",tipoes2)
+print("\n---------------------------------  \n")
+#Pregunta 5
+print("5: Programa para imprima la ruta donde se encuentra trabajando")
+import sys
+rutatrabajo=sys.argv[0]
+print("La ruta de trabajo es: ",rutatrabajo)
+print("\n---------------------------------  \n")
+
+#Pregunta 6
+print("6: Programa que realiza la sumatoria de los numeros(1+2+3+...+n)")
+enesimo1=int(input("Ingrese valor hasta el cual se calcule la sumatoria: "))
+inicio=0
+suma=0
+i=1
+while(inicio<enesimo1):
+ suma=suma+i
+ i=i+1
+ inicio=inicio+1
+
+print("la suma: ",suma)
+print("\n---------------------------------  \n")
+
+#Pregunta 7
+print("7: Programa que compara 2 numeros")
+Numer1=int(input("Ingrese valor del numero 1: "))
+Numer2=int(input("Ingrese valor del numero 2: "))
+if(Numer1==Numer2):
+ print("Los 2 numeros son iguales")
+else:
+ print("Los 2 numeros son diferentes")
+
+if(Numer1>Numer2):
+  print("El primer numero es mayor que el segundo numero")
+else:
+  print("El segundo numero es mayor o igual que el primer numero")
+
+print("\n---------------------------------  \n")   
+
+#Pregunta 8
+print("8: Programa que verifica la contraseña")
+contras1="ABCDEFGH"
+contrasep=input("Ingresar  contraseña: ")
+contrasep2=contrasep.upper()
+if(contrasep2==contras1):
+ print("la contraseña es correcta")
+else:
+ print("la contraseña es incorreta") 
+
+print("\n---------------------------------  \n") 
+#Pregunta 9
+
+Alumnos=(["Pedro",76,78659321],["Juan",70,79862348],["Jorge",98,79864321],["Paolo",22,76582586])
+DNI_S= [78659320,79862348,79864321,76582586]
+sizeAlumnos=len(Alumnos)
+sizeDNI_S=len(DNI_S)
+valorescorrectos=[]
+i=0
+while(i<sizeAlumnos):
+ prob=Alumnos[i]
+ edad2=int(prob[1])
+ if(edad2>=60 ):
+   j=0
+   while(j<sizeDNI_S):
+    DNI_prob=DNI_S[j] 
+    j=j+1
+    if(DNI_prob==prob[2]):
+     valorescorrectos.append(prob[0])     
+ i=i+1
+
+print("\nLos valores que cumplen la condicion de ser mayores de Edad y \nque sus DNI esten en la lista  son: ",valorescorrectos)
+print("\n---------------------------------  \n") 
+
+#Pregunta 10
+print("10: Programa que define un diccionario")
+CursoN = {'curso':{},
+        'numAlumnos': 0,
+        'estado_Curso': [],
+        'alumnos': [],
+        'profesor':{},
+        'max_nota':0
+        }
+
+print("Estructura: curso(1),numAlumno(2),estado_Curso(3),alumnos(4),profesor(5),max_nota(6)")
+confima1=input("Desea modificar algun valor(Y/N)")
+confirma2=confima1.upper()
+if(confima1=='Y'):
+  modif1=int(input('Que desea modificar?(1-6)'))
+  if(modif1==1):
+    cursov2=input('Ingrese el nombre del curso')
+    CursoN.update('curso')
