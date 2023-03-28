@@ -1,0 +1,69 @@
+def mostrar_menu(opciones):
+    print('Seleccione una opción:(1-cuadrado de artesiscos),\n (2-Identificar multiplo de 2),(3-Mayores de edad)')
+    for clave in sorted(opciones):
+        print(f' {clave}) {opciones[clave][0]}')
+
+
+def leer_opcion(opciones):
+    while (a := input('Opción: ')) not in opciones:
+        print('Opción incorrecta, vuelva a intentarlo.')
+    return a
+
+
+def ejecutar_opcion(opcion, opciones):
+    opciones[opcion][1]()
+
+
+def generar_menu(opciones, opcion_salida):
+    opcion = None
+    while opcion != opcion_salida:
+        mostrar_menu(opciones)
+        opcion = leer_opcion(opciones)
+        ejecutar_opcion(opcion, opciones)
+        print()
+
+
+def menu_principal():
+    opciones = {
+        '1': ('Opción 1', accion1),
+        '2': ('Opción 2', accion2),
+        '3': ('Opción 3', accion3),
+        '4': ('Salir', salir)
+    }
+
+    generar_menu(opciones, '4')
+
+
+def accion1():
+    n=int(input("ingrese el numero de lado: "))
+    print('Has elegido la opción 1')
+    for i in range(1,n+1):
+      for j in range (1,n+1):
+         print("*",end="")
+      print(" ") 
+def accion2():
+    Prueba_num=[2,5,6,7,8,9,10]
+    print("Los numeros multiples de 2 de la siguiente lista")
+    print(Prueba_num)
+    print("son: ")
+    for j in range (0,len(Prueba_num)):
+      d=Prueba_num[j]%2
+      if(d!=1):
+       print(Prueba_num[j])
+
+
+def accion3():
+    print('Imprime solo las personas mayores de la siguiente lista')
+    Nombrram=[["Pedro",18],["Luis",5],["Maria",15],["Lucho",50],["Valeria",20]]
+    print(Nombrram)
+    print("Son:" )
+    for j in range (0,len(Nombrram)):
+        Nombreran=Nombrram[j]
+        if(Nombreran[1]>=18):print(Nombreran) 
+
+def salir():
+    print('Saliendo')
+
+
+if __name__ == '__main__':
+    menu_principal()
