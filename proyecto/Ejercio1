@@ -148,17 +148,16 @@ if(confima1=='Y'):
     NumaAlumnosv2=int(input('Ingrese el numero de Alumnos'))
     CursoN.update('numAlumnos')
   elsif(modif1==3):
-    cursov2=input('Ingrese el nombre del curso')
-    CursoN.update('curso')
+    estado_Cursov2=input('Ingrese el estado del curso')
+    CursoN.update('estado_Curso')
   elsif(modif1==4):
     cursov2=input('Ingrese el nombre del curso')
     CursoN.update('curso')
   elsif(modif1==5):
-    cursov2=input('Ingrese el nombre del curso')
-    CursoN.update('curso')  
+    profesorv2=input('Ingrese el nombre del profesor')
+    CursoN.update('profesor')  
   elsif(modif1==6):
-    cursov2=input('Ingrese el nombre del curso')
-    CursoN.update('curso')
-   else:
-    cursov2=input('Ingrese el nombre del curso')
-    CursoN.update('curso')  
+    max_notav2=int(input('Ingrese la nota maxima'))
+    CursoN.update('max_nota')
+  else:
+    print("Ingresaste un valor equivocado,el numero debe estar entre 1 y 6")
