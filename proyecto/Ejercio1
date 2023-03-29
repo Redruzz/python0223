@@ -144,3 +144,21 @@ if(confima1=='Y'):
   if(modif1==1):
     cursov2=input('Ingrese el nombre del curso')
     CursoN.update('curso')
+  elsif(modif1==2):
+    NumaAlumnosv2=int(input('Ingrese el numero de Alumnos'))
+    CursoN.update('numAlumnos')
+  elsif(modif1==3):
+    cursov2=input('Ingrese el nombre del curso')
+    CursoN.update('curso')
+  elsif(modif1==4):
+    cursov2=input('Ingrese el nombre del curso')
+    CursoN.update('curso')
+  elsif(modif1==5):
+    cursov2=input('Ingrese el nombre del curso')
+    CursoN.update('curso')  
+  elsif(modif1==6):
+    cursov2=input('Ingrese el nombre del curso')
+    CursoN.update('curso')
+   else:
+    cursov2=input('Ingrese el nombre del curso')
+    CursoN.update('curso')  
