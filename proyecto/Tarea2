@@ -1,0 +1,65 @@
+##Problama 1 de la tarea 2
+print("Bienvenido al menú interactivo")
+while True:
+    print("""¿Qué quieres hacer? 
+    1) Dibuja un cuadrado de *
+    2) Los numeros multiples de 2 de una lista
+    3) Imprime los datos solamente de personas mayores de edad de una lista
+    4) Salir""")
+    opcion = input("Escribe una opción: ") # me devuelve un string ''
+    if opcion == '1':
+        n=int(input("ingrese el numero de lado: "))
+        print('Has elegido la opción 1')
+        for i in range(1,n+1):
+           for j in range (1,n+1):
+            print("*",end="")
+           print(" ") 
+    elif opcion == '2':
+        Prueba_num=[2,5,6,7,8,9,10]
+        print("Los numeros multiples de 2 de la siguiente lista")
+        print(Prueba_num)
+        print("son: ")
+        for j in range (0,len(Prueba_num)):
+          d=Prueba_num[j]%2
+          if(d!=1):
+             print(Prueba_num[j])
+    elif opcion == '3':    
+        print('Imprime solo las personas mayores de la siguiente lista')
+        Nombrram=[["Pedro",18],["Luis",5],["Maria",15],["Lucho",50],["Valeria",20]]
+        print(Nombrram)
+        print("Son:" )
+        for j in range (0,len(Nombrram)):
+          Nombreran=Nombrram[j]
+          if(Nombreran[1]>=18):print(Nombreran) 
+    elif opcion =='4':
+        print("¡Hasta luego! Ha sido un placer ayudarte")
+        break
+    else:
+        print("Comando desconocido, vuelve a intentarlo")
+
+##Problema 2 de la tarea 2
+
+
+##Problema 3 de la tarea 2
+# esta es una función básica de suma
+print("Calcula el mayor de 2 numeros")
+c1=int(input("ingrese el primer numero: "))
+c2=int(input("ingrese el numero de lado: "))
+def mayor(a, b):
+  if(a>=b):
+   c=a
+  else:
+   c=b     
+  return c
+
+result = mayor(c1, c2)
+print("el mayor es: ", result)
+
+##Problema 4 de la tarea 2
+import sys
+
+args = sys.argv
+print("argumentos:", args)
+print("cantidad de argumentos:", len(args))
+
+##Problema 5 de la tarea 2
